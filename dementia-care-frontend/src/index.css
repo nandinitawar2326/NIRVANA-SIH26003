@@ -1,0 +1,675 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7f2;
+}
+
+.home-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.home-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.home-page p {
+  font-size: 22px;
+}
+
+.home-page h2 {
+  font-size: 28px;
+  margin-top: 40px;
+}
+
+.home-buttons {
+  max-width: 700px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.home-buttons button {
+  padding: 25px;
+  font-size: 22px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-buttons button:hover {
+  transform: scale(1.03);
+}
+/* =========================
+   HOME DASHBOARD
+   ========================= */
+
+.home-page {
+  min-height: 100vh;
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+/* Header */
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.home-header h1 {
+  font-size: 38px;
+  margin: 0 0 8px;
+}
+
+.home-header p {
+  font-size: 21px;
+  margin: 0;
+}
+
+.profile-icon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Next Activity */
+
+.next-activity h2,
+.features h2 {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.medicine-card {
+  background: white;
+  padding: 22px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 35px;
+}
+
+.medicine-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  background: #f1f8e9;
+}
+
+.medicine-info {
+  flex: 1;
+}
+
+.medicine-info h3 {
+  font-size: 24px;
+  margin: 0 0 5px;
+}
+
+.medicine-info p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.medicine-info span {
+  font-size: 16px;
+}
+
+.take-button {
+  padding: 16px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Feature Cards */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  padding: 25px 15px;
+  min-height: 170px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-card span {
+  font-size: 45px;
+}
+
+.feature-card strong {
+  font-size: 21px;
+}
+
+.feature-card small {
+  font-size: 15px;
+}
+
+
+/* Voice Assistant */
+
+.voice-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.voice-button {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-size: 40px;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.voice-button span {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.voice-button strong {
+  font-size: 22px;
+}
+
+.voice-button small {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .home-page {
+    padding: 20px;
+  }
+
+  .home-header h1 {
+    font-size: 30px;
+  }
+
+  .home-header p {
+    font-size: 18px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .medicine-card {
+    flex-wrap: wrap;
+  }
+
+  .take-button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+.feature-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.take-button {
+  text-decoration: none;
+  color: white;
+  background: #4caf50;
+  display: inline-block;
+  text-align: center;
+}
+/* =========================
+   BRAIN GAMES
+   ========================= */
+
+.games-page {
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.games-page h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.games-subtitle {
+  font-size: 22px;
+  margin-bottom: 35px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.game-card {
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  padding: 30px;
+  min-height: 260px;
+  border-radius: 25px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-icon {
+  font-size: 65px;
+  margin-bottom: 10px;
+}
+
+.game-card h2 {
+  font-size: 26px;
+  margin: 10px;
+}
+
+.game-card p {
+  font-size: 18px;
+  margin: 8px 0 20px;
+}
+
+.game-card span {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+@media (max-width: 650px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .games-page h1 {
+    font-size: 32px;
+  }
+}
+
+/* =========================
+   COMMON FORM PAGE
+========================= */
+
+.form-page {
+  min-height: 100vh;
+  padding: 30px 20px;
+  background: #f5f7f2;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 650px;
+  margin: 30px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-icon {
+  font-size: 60px;
+}
+
+.form-header h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.form-header p {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #4caf50;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.primary-form-button {
+  width: 100%;
+  border: none;
+  padding: 16px;
+  border-radius: 14px;
+  background: #4caf50;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.primary-form-button:hover {
+  transform: scale(1.02);
+}
+
+
+/* =========================
+   ALERTS
+========================= */
+
+.alerts-page {
+  min-height: 100vh;
+  padding: 30px 20px;
+  background: #f5f7f2;
+}
+
+.alerts-header {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.alerts-header h1 {
+  font-size: 34px;
+  margin: 10px 0;
+}
+
+.alerts-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+.alerts-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.alert-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-left: 7px solid;
+}
+
+.alert-active {
+  border-left-color: #f44336;
+}
+
+.alert-resolved {
+  border-left-color: #4caf50;
+}
+
+.alert-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.alert-top h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.alert-top p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.alert-status {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #ffcdd2;
+  color: #b71c1c;
+  font-weight: bold;
+}
+
+.alert-resolved .alert-status {
+  background: #c8e6c9;
+  color: #2e7d32;
+}
+
+.alert-information {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 12px;
+}
+
+.alert-information p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.resolve-button {
+  border: none;
+  padding: 13px 20px;
+  border-radius: 12px;
+  background: #4caf50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.no-alerts {
+  background: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 20px;
+}
+
+.no-alerts div {
+  font-size: 60px;
+}
+
+.no-alerts h2 {
+  font-size: 25px;
+}
+
+.no-alerts p {
+  color: #666;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .form-card {
+    padding: 25px;
+  }
+
+  .form-header h1 {
+    font-size: 27px;
+  }
+
+  .alert-top {
+    flex-direction: column;
+  }
+
+  .alert-status {
+    align-self: flex-start;
+  }
+
+}
+
+.registration-button {
+  display: inline-block;
+  text-decoration: none;
+  background: #2196f3;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.registration-button:hover {
+  transform: scale(1.03);
+}
+
+/* Your existing CSS above */
+/* ... */
+
+
+/* Welcome page buttons */
+.welcome-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.welcome-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 280px;
+  height: 58px;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+  border: none;
+  border-radius: 14px;
+
+  background: #4caf50;
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.welcome-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-button:active {
+  transform: scale(0.98);
+}
+
+
+
+
+
