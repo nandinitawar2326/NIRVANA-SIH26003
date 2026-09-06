@@ -30,12 +30,14 @@ def recommend_activity(memory, attention, recall, pattern):
 
 
 # Test the recommendation system
-weakest_area, game = recommend_activity(
-    memory=78,
-    attention=82,
-    recall=55,
-    pattern=70
-)
+if __name__ == "__main__":
 
-print("Area needing more practice:", weakest_area)
-print("Recommended Next Activity:", game)
+    weakest_area, game = recommend_activity(
+        memory=78,
+        attention=82,
+        recall=55,
+        pattern=70
+    )
+
+    print("Area needing more practice:", weakest_area)
+    print("Recommended Next Activity:", game)

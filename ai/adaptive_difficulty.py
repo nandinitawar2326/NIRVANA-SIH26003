@@ -27,11 +27,13 @@ def choose_difficulty(accuracy, response_time, mistakes):
 
 
 # Test the AI
-score, difficulty = choose_difficulty(
-    accuracy=90,
-    response_time=12,
-    mistakes=1
-)
+if __name__ == "__main__":
 
-print("Performance Score:", score)
-print("Recommended Difficulty:", difficulty)
+    score, difficulty = choose_difficulty(
+        accuracy=90,
+        response_time=12,
+        mistakes=1
+    )
+
+    print("Performance Score:", score)
+    print("Recommended Difficulty:", difficulty)

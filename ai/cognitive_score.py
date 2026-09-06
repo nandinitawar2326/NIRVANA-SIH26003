@@ -32,14 +32,16 @@ def performance_level(score):
 
 
 # Test the system
-score = calculate_cognitive_score(
-    memory=40,
-    attention=55,
-    recall=45,
-    pattern=50
-)
+if __name__ == "__main__":
 
-level = performance_level(score)
+    score = calculate_cognitive_score(
+        memory=78,
+        attention=82,
+        recall=74,
+        pattern=65
+    )
 
-print("Overall Cognitive Engagement Score:", score)
-print("Performance Level:", level)
+    level = performance_level(score)
+
+    print("Overall Cognitive Engagement Score:", score)
+    print("Performance Level:", level)
