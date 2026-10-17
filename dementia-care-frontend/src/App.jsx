@@ -1,184 +1,83 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Authentication
-import Welcome from "./pages/Welcome";
-import Login from "./pages/Login";
+import Welcome from "./pages/welcome.jsx";
+import Login from "./pages/login.jsx";
 
 // Registration
-import PatientRegistration from "./pages/PatientRegistration";
-import AddCaregiver from "./pages/AddCaregiver";
+import PatientRegistration from "./pages/PatientRegistration.jsx";
+import AddCaregiver from "./pages/AddCaregiver.jsx";
 
 // Main Pages
-import Home from "./pages/Home";
-import Medicine from "./pages/Medicine";
-import Games from "./pages/Games";
-import Garden from "./pages/Garden";
-import Stories from "./pages/Stories";
-import Family from "./pages/Family";
-import Calm from "./pages/Calm";
-import Contacts from "./pages/Contacts";
-import Safety from "./pages/Safety";
+import Home from "./pages/home.jsx";
+import Medicine from "./pages/medicine.jsx";
+import Games from "./pages/games.jsx";
+import Garden from "./pages/garden.jsx";
+import Stories from "./pages/stories.jsx";
+import Family from "./pages/family.jsx";
+import Calm from "./pages/calm.jsx";
+import Contacts from "./pages/contacts.jsx";
+import Safety from "./pages/safety.jsx";
 
 // Caregiver / Backend Modules
-import Reminders from "./pages/Reminders";
-import MemoryAssistance from "./pages/MemoryAssistance";
-import Alerts from "./pages/Alerts";
+import Reminders from "./pages/Reminders.jsx";
+import MemoryAssistance from "./pages/MemoryAssistance.jsx";
+import Alerts from "./pages/Alerts.jsx";
 
 // Games
-import MemoryGame from "./pages/MemoryGame";
-import ObjectGame from "./pages/ObjectGame";
-import PatternGame from "./pages/PatternGame";
-import FamilyGame from "./pages/FamilyGame";
+import MemoryGame from "./pages/memoryGame.jsx";
+import ObjectGame from "./pages/objectGame.jsx";
+import PatternGame from "./pages/patternGame.jsx";
+import FamilyGame from "./pages/familyGame.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Welcome & Authentication */}
+        <Route path="/" element={<Welcome />} />
+        <Route path="/login" element={<Login />} />
 
-        {/* =========================
-            WELCOME & AUTHENTICATION
-        ========================= */}
-
-        <Route
-          path="/"
-          element={<Welcome />}
-        />
-
-        <Route
-          path="/login"
-          element={<Login />}
-        />
-
-
-        {/* =========================
-            REGISTRATION
-        ========================= */}
-
+        {/* Registration */}
         <Route
           path="/patient-registration"
           element={<PatientRegistration />}
         />
+        <Route path="/add-caregiver" element={<AddCaregiver />} />
 
-        <Route
-          path="/add-caregiver"
-          element={<AddCaregiver />}
-        />
+        {/* Patient Home */}
+        <Route path="/home" element={<Home />} />
 
+        {/* Patient Features */}
+        <Route path="/medicine" element={<Medicine />} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/garden" element={<Garden />} />
+        <Route path="/stories" element={<Stories />} />
+        <Route path="/family" element={<Family />} />
+        <Route path="/calm" element={<Calm />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/safety" element={<Safety />} />
 
-        {/* =========================
-            PATIENT HOME
-        ========================= */}
+        {/* Reminders */}
+        <Route path="/reminders" element={<Reminders />} />
 
-        <Route
-          path="/home"
-          element={<Home />}
-        />
-
-
-        {/* =========================
-            PATIENT FEATURES
-        ========================= */}
-
-        <Route
-          path="/medicine"
-          element={<Medicine />}
-        />
-
-        <Route
-          path="/games"
-          element={<Games />}
-        />
-
-        <Route
-          path="/garden"
-          element={<Garden />}
-        />
-
-        <Route
-          path="/stories"
-          element={<Stories />}
-        />
-
-        <Route
-          path="/family"
-          element={<Family />}
-        />
-
-        <Route
-          path="/calm"
-          element={<Calm />}
-        />
-
-        <Route
-          path="/contacts"
-          element={<Contacts />}
-        />
-
-        <Route
-          path="/safety"
-          element={<Safety />}
-        />
-
-
-        {/* =========================
-            REMINDERS
-        ========================= */}
-
-        <Route
-          path="/reminders"
-          element={<Reminders />}
-        />
-
-
-        {/* =========================
-            MEMORY ASSISTANCE
-        ========================= */}
-
+        {/* Memory Assistance */}
         <Route
           path="/memory-assistance"
           element={<MemoryAssistance />}
         />
 
+        {/* Emergency Alerts */}
+        <Route path="/alerts" element={<Alerts />} />
 
-        {/* =========================
-            EMERGENCY ALERTS
-        ========================= */}
-
-        <Route
-          path="/alerts"
-          element={<Alerts />}
-        />
-
-
-        {/* =========================
-            BRAIN GAMES
-        ========================= */}
-
-        <Route
-          path="/games/memory"
-          element={<MemoryGame />}
-        />
-
-        <Route
-          path="/games/object"
-          element={<ObjectGame />}
-        />
-
-        <Route
-          path="/games/pattern"
-          element={<PatternGame />}
-        />
-
-        <Route
-          path="/games/family"
-          element={<FamilyGame />}
-        />
-
+        {/* Brain Games */}
+        <Route path="/games/memory" element={<MemoryGame />} />
+        <Route path="/games/object" element={<ObjectGame />} />
+        <Route path="/games/pattern" element={<PatternGame />} />
+        <Route path="/games/family" element={<FamilyGame />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
