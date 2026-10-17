@@ -14,3 +14,26 @@ __pycache__/
 
 # VS Code
 .vscode/
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python generated model
+*.pkl
+
+# Temporary files
+*.tmp
+*.log
